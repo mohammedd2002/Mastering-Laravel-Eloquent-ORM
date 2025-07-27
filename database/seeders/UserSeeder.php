@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(2)->unverified()->admin()->trashed()->sequence(
+        User::factory(10)->unverified()->admin()->trashed()->sequence(
             ['is_admin' => 1],
             ['is_admin' => 0]
         )->create();
