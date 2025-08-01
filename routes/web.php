@@ -22,7 +22,14 @@ Route::get('/', function () {
     // $users = User::firstWhere('name','Test User');
     // $users = User::whereName('Test User')->get();
     // $users = User::whereAny( ['name' , 'email'] ,'LIKE' , '%Test%')->get();
-    $users = User::whereAll( ['name' , 'email'] ,'LIKE' , '%Test%')->get();
+    // $users = User::whereAll( ['name' , 'email'] ,'LIKE' , '%Test%')->get();
+    // $users = User::orderBy('name' , 'asc')->pluck('name')->toArray();
+    // $users = User::inRandomOrder()->pluck('name')->toArray();
+    //    $users = User::offset(2)->take(3)->pluck('name')->toArray();  //offset() == skip() // take() == limit()
+    
+
+
+
     dump($users);
 });
 
@@ -36,4 +43,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
