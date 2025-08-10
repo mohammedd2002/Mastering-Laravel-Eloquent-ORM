@@ -25,12 +25,17 @@ Route::get('/', function () {
     // $users = User::whereAll( ['name' , 'email'] ,'LIKE' , '%Test%')->get();
     // $users = User::orderBy('name' , 'asc')->pluck('name')->toArray();
     // $users = User::inRandomOrder()->pluck('name')->toArray();
-    //    $users = User::offset(2)->take(3)->pluck('name')->toArray();  //offset() == skip() // take() == limit()
-    
-
-
-
-    dump($users);
+    // $users = User::offset(2)->take(3)->pluck('name')->toArray();  //offset() == skip() // take() == limit()
+    // $users = User::with(['posts' => function($query){
+    //     $query->where('likes', '<', 500);
+    // }])->get();
+    // $users = User::has('posts')->get();
+    // $users = User::doesntHave('posts')->get();
+    // $users = User::whereHas('posts', function($query) {
+    //     $query->where('likes', '>', 700);
+    // })->get();
+    // $users = User::withCount('posts')->get();
+    // dump($users);
 });
 
 Route::get('/dashboard', function () {
