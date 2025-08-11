@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
@@ -35,6 +36,16 @@ Route::get('/', function () {
     //     $query->where('likes', '>', 700);
     // })->get();
     // $users = User::withCount('posts')->get();
+    // $users = User::chunk(3 , function($users) {
+    //    dump($users);
+    // });
+    // $users = User::addSelect( ['last_post_title' => Post::select('title')->
+    //     whereColumn('user_id', 'users.id')
+    //     ->orderBy('id', 'desc')
+    //     ->limit(1)
+    // ])->get();
+    // $users = User::lazy();
+
     // dump($users);
 });
 
