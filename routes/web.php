@@ -4,6 +4,7 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', function () {
     // $users = User::all('name');                                     
@@ -46,7 +47,28 @@ Route::get('/', function () {
     // ])->get();
     // $users = User::lazy();
 
+    // soft delete
+    // $users = User::find(1)->delete();
+    // $users = User::onlyTrashed()->get();
+    // $users = User::withTrashed()->get();
+    // $users = User::onlyTrashed()->find(1)->restore();
+    // $users = User::withTrashed()->forceDelete();
+    // Artisan::call('model:prune');
+
+    // $user = User::create([
+    //     'name' => 'Test User',
+    //     'email' => 'test@example.com',
+    //     'password' => bcrypt('password'),
+    //     'is_admin' => 0,
+    //     'wallet' => 1000,
+    // ]);
+    // $user->replicate(['wallet'])->fill([
+    //     'email' => 'test2@example.com',
+    //     'is_admin' => 1,
+    // ]);
+
     // dump($users);
+    
 });
 
 Route::get('/dashboard', function () {
