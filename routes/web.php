@@ -57,7 +57,7 @@ Route::get('/', function () {
 
     // $user = User::create([
     //     'name' => 'Test User',
-    //     'email' => 'test@example.com',
+    //     'email' => 'testcc@example1.com',
     //     'password' => bcrypt('password'),
     //     'is_admin' => 0,
     //     'wallet' => 1000,
@@ -67,8 +67,19 @@ Route::get('/', function () {
     //     'is_admin' => 1,
     // ]);
 
+
+    // User::withoutEvents(function () {
+    //     User::create([
+    //     'name' => 'Test User',
+    //     'email' => 'hamada@example1.com',
+    //     'password' => bcrypt('password'),
+    //     'is_admin' => 0,
+    //     'wallet' => 1000,
+    // ]);
+    // });
+
     // dump($users);
-    
+
 });
 
 Route::get('/dashboard', function () {
