@@ -97,7 +97,11 @@ Route::get('/', function () {
     // $post->save();
     // dd($post);
 
-    
+    User::factory()
+    // ->has(Post::factory()->count(3))
+    ->hasPosts(3 , ['likes' => 100])  // using magic method
+    ->count(1)
+    ->create();
     
 });
 
