@@ -27,14 +27,19 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-
-    public function prunable(): Builder
+    public function comments()
     {
-        return static::where('created_at', '<=', now()->subMonth());
+        return $this->hasMany(Comment::class);
     }
 
-    protected function pruning(): void
-    {
-        Log::info('Pruning post: ' . $this->id);
-    }
+
+    // public function prunable(): Builder
+    // {
+    //     return static::where('created_at', '<=', now()->subMonth());
+    // }
+
+    // protected function pruning(): void
+    // {
+    //     Log::info('Pruning post: ' . $this->id);
+    // }
 }

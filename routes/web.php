@@ -78,8 +78,27 @@ Route::get('/', function () {
     // ]);
     // });
 
+    // $user = User::find(11);
+    // dd($user->comments);
     // dump($users);
 
+    // $user = User::find(37);
+    // dd($user->posts()->createMany([
+    //     ['title' => 'My first post', 'likes' => 100],
+    //     ['title' => 'My second post', 'likes' => 200],
+    //     ['title' => 'My third post', 'likes' => 300],
+    // ]));
+
+    // $users = User::has('posts.comments')->withCount('posts as posts_count')->get();
+    // dd($users);
+
+    // $post = Post::find(1);
+    // $post->user()->associate(User::find(37));
+    // $post->save();
+    // dd($post);
+
+    
+    
 });
 
 Route::get('/dashboard', function () {

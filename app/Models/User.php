@@ -71,6 +71,19 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    // public function phone(){
+    //     return $this->hasOne(Phone::class);
+    // }
+
+    // public function serial(){
+    //     return $this->hasOneThrough(Serial::class, Phone::class);
+    // }
+
+    public function comments()
+    {
+        return $this->hasManyThrough(Comment::class, Post::class);
+    }
+
     // protected static function booted(): void
     // {
 
